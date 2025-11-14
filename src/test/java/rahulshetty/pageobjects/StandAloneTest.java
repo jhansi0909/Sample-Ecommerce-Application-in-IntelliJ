@@ -6,12 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
 
 public class StandAloneTest {
-    public static void main(String[] args){
+    @Test
+    public void placeOrderTest(){
 
         String productName="ZARA COAT 3";
         WebDriverManager.chromedriver().setup();
