@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Baseclass {
- WebDriver driver;
+    WebDriver driver;
     public Baseclass(WebDriver driver){
         this.driver=driver;
     }

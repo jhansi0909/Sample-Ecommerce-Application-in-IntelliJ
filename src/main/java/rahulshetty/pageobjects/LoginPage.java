@@ -1,15 +1,11 @@
-package rahulshetty.pageobjets;
+package rahulshetty.pageobjects;
 
-import Base.Baseclass;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.awt.print.PageFormat;
-
-public class LoginPage extends Baseclass   {
+public class LoginPage extends rahulshetty.pageobjets.Baseclass {
    WebDriver driver;
    //this is the constructor. why we write consructor here, Before touching anything in this class constructor will be executed.
     public LoginPage(WebDriver driver){

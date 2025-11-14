@@ -1,6 +1,5 @@
-package rahulshetty.pageobjets;
+package rahulshetty.pageobjects;
 
-import Base.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class ProductCart extends Baseclass {
+public class ProductCart extends rahulshetty.pageobjets.Baseclass {
    WebDriver driver;
    //this is the constructor. why we write constructor here, Before touching anything in this class constructor will be executed.
     public ProductCart(WebDriver driver){
