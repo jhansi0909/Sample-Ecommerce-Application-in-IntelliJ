@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -30,7 +32,9 @@ public class StandAloneTest {
         List<WebElement> products=productCart.getProductList();
         productCart.addProductCard(productName);
 
-
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+// Wait until spinner is not visible
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".ngx-spinner-overlay")));
         driver.findElement(By.cssSelector("[routerlink*='/dashboard/cart']")).click(); // regular expression
 // After adding the cart we need to check the product is added correctly or not.
         List<WebElement> cartProducts=driver.findElements(By.cssSelector(".cartSection h3"));
