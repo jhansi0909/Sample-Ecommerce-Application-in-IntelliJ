@@ -31,7 +31,7 @@ public class StandAloneTest {
         productCart.addProductCard(productName);
 
 
-        driver.findElement(By.cssSelector("[routerlink*='cart']")).click(); // regular expression
+        driver.findElement(By.cssSelector("[routerlink*='/dashboard/cart']")).click(); // regular expression
 // After adding the cart we need to check the product is added correctly or not.
         List<WebElement> cartProducts=driver.findElements(By.cssSelector(".cartSection h3"));
 
